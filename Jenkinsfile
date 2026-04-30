@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        githubPush()
+    }
+
     tools {
         nodejs 'node' // Ensure Node.js is configured in Jenkins Global Tool Configuration
     }
